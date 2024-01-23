@@ -4,8 +4,32 @@ class Program
 {
     static void Main(string[] args)
     {
-        
+        DisplayWelcomeMessage();
+
+        string userName = promptUserName();
+        int userNumber = promptUserNumber();
     }
+
+    static void DisplayWelcomeMessage()
+    {
+        Console.WriteLine("Welcome to the program!");
+        System.Console.WriteLine();
+    }
+
+    static string promptUserName()
+    {
+        System.Console.WriteLine("Please enter your name: ");
+        string nameOfHuman = Console.ReadLine();
+
+        return nameOfHuman; 
+    }
+
+    static int promptUserNumber()
+    {
+        Console.Write("Please enter a number: ");
+        int 
+    }
+
 }
 
 /*
