@@ -8,6 +8,10 @@ class Program
 
         string userName = promptUserName();
         int userNumber = promptUserNumber();
+
+        int squaredNumber = squareNumber(userNumber);
+
+        displayResult(userName, squaredNumber);
     }
 
     static void DisplayWelcomeMessage()
@@ -18,8 +22,18 @@ class Program
 
     static string promptUserName()
     {
-        System.Console.WriteLine("Please enter your name: ");
+        System.Console.Write("Please enter your name: ");
+        // asks the user to input there name
+        
         string nameOfHuman = Console.ReadLine();
+        // the info is being stored 
+
+        string capitalizingName = nameOfHuman.First().ToString().ToUpper() + nameOfHuman.Substring(1);
+        // creates a new string
+        // the first letter capitalized, but this string is not used further
+
+        Console.WriteLine(capitalizingName);
+        // displays the capitalized name to the console, but it's not returned from the function.
 
         return nameOfHuman; 
     }
@@ -27,7 +41,24 @@ class Program
     static int promptUserNumber()
     {
         Console.Write("Please enter a number: ");
-        int 
+        // asks the user 
+        int number = int.Parse(Console.ReadLine());
+        // takes the input
+
+        return number;
+        // this returns what they said
+    }
+
+    static int squareNumber(int number)
+    {
+        int square = number * number; 
+        // 
+        return square;
+    }
+
+    static void displayResult(string name, int square)
+    {
+        System.Console.WriteLine($"{name}, the square of your number is {square} ");
     }
 
 }
